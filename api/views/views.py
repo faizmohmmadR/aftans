@@ -40,11 +40,6 @@ class BookingListCreateView(generics.ListCreateAPIView):
     serializer_class = BookingSerializer
     
 # booking retrieve update and destroy
-class BookingListCreateView(generics.ListCreateAPIView):
-    queryset = Booking.objects.all()
-    serializer_class = BookingSerializer 
-    
-# booking retrieve update and destroy
 class BookingRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer 
@@ -56,3 +51,11 @@ class UserProfileListCreateView(generics.ListCreateAPIView):
 class UserProfileRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
+    
+class TagListCreateView(generics.ListCreateAPIView):
+    queryset = Tag.objects.all()
+    serializer_class = TagSerializer
+    
+class TagRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Tag.objects.all()
+    serializer_class = TagSerializer
